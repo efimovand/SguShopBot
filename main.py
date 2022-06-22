@@ -116,7 +116,7 @@ def reply(message):
     # ---------------------- 2 Семестр -------------------------------
 
         # 2 Семестр
-        elif message.text == '2 Семестр 🌷':
+        elif (message.text == '2 Семестр 🌷') or (message.text == '⬅ 2 Семестр'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
             button1 = types.KeyboardButton('Матан 🔢')
@@ -133,6 +133,63 @@ def reply(message):
             markup.add(button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonBack)
 
             bot.send_message(message.chat.id, 'Выбери предмет 📚', reply_markup=markup)
+
+        # Прога 2
+        elif message.text == 'Прога ‍🧑‍💻':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+
+            button1 = types.KeyboardButton('Работа с STL')
+            button2 = types.KeyboardButton('Сортировки')
+            button3 = types.KeyboardButton('Динамические структуры')
+            button4 = types.KeyboardButton('Деревья')
+            button5 = types.KeyboardButton('Графы')
+            button6 = types.KeyboardButton('Хэширование')
+            button7 = types.KeyboardButton('Алгоритмы')
+            button8 = types.KeyboardButton('КР 📄')
+            buttonBack = types.KeyboardButton('⬅ 2 Семестр')
+
+            markup.add(button1, button2, button3, button4, button5, button6, button7, button8, buttonBack)
+
+            bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
+
+        # Физра 2
+        elif message.text == 'Физра 🏃‍♂️':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+
+            button1 = types.KeyboardButton('Тест ⛷')
+            button2 = types.KeyboardButton('Реферат 🏋️‍♀️')
+            buttonBack = types.KeyboardButton('⬅ 2 Семестр')
+
+            markup.add(button1, button2, buttonBack)
+
+            bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
+
+        # ВВС 2
+        elif message.text == 'ВВС 🗣':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+
+            button1 = types.KeyboardButton('Словарь 📕')
+            buttonBack = types.KeyboardButton('⬅ 2 Семестр')
+
+            markup.add(button1, buttonBack)
+
+            bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
+
+        # СИТ 2
+        elif message.text == 'СИТ 💻':
+            markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+
+            button1 = types.KeyboardButton('Терминал')
+            button2 = types.KeyboardButton('Ветки и форки')
+            button3 = types.KeyboardButton('Работа с Git')
+            button4 = types.KeyboardButton('Создание текста в LaTeX')
+            button5 = types.KeyboardButton('Форматирование текста в LaTeX')
+            button6 = types.KeyboardButton('Формулы в LaTeX')
+            buttonBack = types.KeyboardButton('⬅ 2 Семестр')
+
+            markup.add(button1, button2, button3, button4, button5, button6, buttonBack)
+
+            bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
 
 
 def changeSemestr(message):
