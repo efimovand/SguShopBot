@@ -58,6 +58,7 @@ def reply(message):
 
             bot.send_message(message.chat.id, 'Выбери предмет 📚', reply_markup=markup)
 
+
         # Прога 1
         elif message.text == 'Прога 👨‍💻':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -76,6 +77,41 @@ def reply(message):
 
             bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
 
+        # Прога 1 (задания)
+        elif message.text == 'Базовые эл-ты языка':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>200₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+        elif message.text == 'Базовые операторы':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>200₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+        elif message.text == 'Задачи на ряды':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>300₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+        elif message.text == 'Массивы':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>300₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+        elif message.text == 'Функции':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>300₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+        elif message.text == 'Сложные типы данных':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>300₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+        elif message.text == 'Факультатив':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>300₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+        elif message.text == 'Контрольная работа':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>800₽</b> \nПримечание: задания 1, 2, 3', parse_mode='html', reply_markup=markup)
+
+
         # Физра 1
         elif message.text == 'Физра 🏃':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -86,6 +122,7 @@ def reply(message):
             markup.add(button1, buttonBack)
 
             bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
+
 
         # ТИ 1
         elif message.text == 'ТИ 🧮':
@@ -98,6 +135,7 @@ def reply(message):
             markup.add(button1, button2, buttonBack)
 
             bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
+
 
         # История 1
         elif message.text == 'История 🏛':
@@ -134,6 +172,7 @@ def reply(message):
 
             bot.send_message(message.chat.id, 'Выбери предмет 📚', reply_markup=markup)
 
+
         # Прога 2
         elif message.text == 'Прога ‍🧑‍💻':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -152,6 +191,7 @@ def reply(message):
 
             bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
 
+
         # Физра 2
         elif message.text == 'Физра 🏃‍♂️':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -164,6 +204,7 @@ def reply(message):
 
             bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
 
+
         # ВВС 2
         elif message.text == 'ВВС 🗣':
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -174,6 +215,13 @@ def reply(message):
             markup.add(button1, buttonBack)
 
             bot.send_message(message.chat.id, 'Выбери задание 📚', reply_markup=markup)
+
+        # ВВС 2 (задания)
+        elif message.text == 'Словарь 📕':
+            markup = types.InlineKeyboardMarkup()
+            markup.add(types.InlineKeyboardButton("Оплатить 💵", url="https://google.com"))
+            bot.send_message(message.chat.id, 'Стоимость: <b>300₽</b> \nПримечание: 2 примера, оцененные на макс. балл', parse_mode='html', reply_markup=markup)
+
 
         # СИТ 2
         elif message.text == 'СИТ 💻':
